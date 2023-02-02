@@ -1,5 +1,5 @@
 export interface EmployeeModel {
-  name: string
+  employeeName: string
   address: string
   mobile: number
 }
