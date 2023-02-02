@@ -1,0 +1,41 @@
+<div class="form">
+  <div class="card">
+    <h1>Employee Registration</h1>
+  </div>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Employee Name</mat-label>
+      <input matInput [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="Digite">
+      <mat-icon matSuffix></mat-icon>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input matInput [(ngModel)]="address" [ngModelOptions]="{standalone: true}" placeholder="Digite">
+      <mat-icon matSuffix></mat-icon>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Mobile</mat-label>
+      <input matInput [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}" placeholder="Digite">
+      <mat-icon matSuffix></mat-icon>
+    </mat-form-field>
+  </p>
+
+  <section>
+    <div class="example-button-row">
+      <button mat-button (click)="save()" color="primary">SAVE EMPLOYEE</button>
+    </div>
+  </section>
+
+<!--  <section>-->
+<!--    <div class="example-button-row">-->
+<!--      <button mat-button (click)="findAll()" color="primary">All Employees</button>-->
+<!--    </div>-->
+<!--  </section>-->
+
+</div>
