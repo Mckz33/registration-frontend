@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {EmployeeModel} from "../models/employee.model";
-import {catchError, EMPTY, map, Observable, throwError} from "rxjs";
+import {catchError, EMPTY, map, Observable} from "rxjs";
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Injectable({
@@ -35,15 +35,13 @@ export class EmployeeService {
     return this.httpClient.get<EmployeeModel[]>(this.baseUrl)
   }
 
-
   delete(id: number | undefined): Observable<EmployeeModel> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.httpClient.delete<EmployeeModel>(url).pipe(
-      catchError(error => {
-        console.error(error);
-        return throwError(error);
-      })
-    );
+    const url = `${this.baseUrl}/${id}`
+    return this.httpClient.delete<EmployeeModel>(url)
+  }
+
+  deleteEmployee(): void {
+    this.httpClient.delete<EmployeeModel>(this.baseUrl)
   }
 
   readById(id: string | null): Observable<any>{
