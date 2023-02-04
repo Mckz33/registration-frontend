@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {EmployeeModel} from "../models/employee.model";
 import {EmployeeService} from "../services/employee.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-employee-delete',
@@ -22,9 +23,13 @@ export class EmployeeDeleteComponent implements OnInit{
   }
   deleteEmployee(): void {
     this.employeeService.delete(this.employee.id).subscribe(() => {
-      this.employeeService.showMessage('Employee deleted.')
-      this.router.navigate([''])
+      this.employeeService.showMessage("Employee deleted.")
+      this.router.navigate(['/read'])
     })
+  }
+
+  cancel(): void {
+    this.router.navigate(['/read'])
   }
 
   ngOnInit(): void {
@@ -32,9 +37,5 @@ export class EmployeeDeleteComponent implements OnInit{
     this.employeeService.readById(id).subscribe(employee => {
       this.employee = employee
     })
-  }
-
-  cancel(): void {
-    this.router.navigate(['/read'])
   }
 }
