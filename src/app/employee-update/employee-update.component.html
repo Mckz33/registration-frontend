@@ -1,0 +1,24 @@
+<mat-toolbar>
+  <mat-card class="card">
+    <mat-card-title class="title-form">Alter Employee</mat-card-title>
+    <form>
+      <mat-form-field>
+        <input matInput type="text" placeholder="employeeName" [(ngModel)]="employee.employeeName" name="employeeName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="address" [(ngModel)]="employee.address" name="address">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="mobile" [(ngModel)]="employee.mobile" name="mobile">
+      </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateEmployee()" color="primary">
+      SAVE
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+      Cancel
+    </button>
+  </mat-card>
+
+</mat-toolbar>

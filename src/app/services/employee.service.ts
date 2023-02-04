@@ -44,4 +44,9 @@ export class EmployeeService {
     const url = `${this.baseUrl}/${id}`
     return this.httpClient.get<EmployeeModel>(url)
   }
+
+  update(employee: EmployeeModel): Observable<any> {
+    const url = `${this.baseUrl}/${employee.id}`
+    return this.httpClient.put<EmployeeModel>(url, employee)
+  }
 }
