@@ -6,24 +6,33 @@ import { AppComponent } from './app.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatIconModule} from "@angular/material/icon";
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeComponent } from './employee-create/employee.component';
 import {HttpClientModule} from "@angular/common/http";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { EmployeeDeleteComponent } from './employee-delete/employee-delete.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { EmployeeReadComponent } from './employee-read/employee-read.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    EmployeeDeleteComponent,
+    EmployeeReadComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MatInputModule,
-        ReactiveFormsModule,
-        MatIconModule,
-        HttpClientModule,
-        FormsModule
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule
+  ],
+  providers: [MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
