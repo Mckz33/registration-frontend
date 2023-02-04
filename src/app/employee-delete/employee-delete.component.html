@@ -1,0 +1,24 @@
+<mat-toolbar>
+  <mat-card class="card">
+    <mat-card-title class="title-form">Delete Employee</mat-card-title>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="employeeName" [value]="employee.employeeName" name="employeeName" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="address" [value]="employee.address" name="address" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="mobile" [ngModel]="employee.mobile" name="mobile" disabled>
+      </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteEmployee()" color="warn">
+      Delete
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+      Cancel
+    </button>
+  </mat-card>
+
+</mat-toolbar>

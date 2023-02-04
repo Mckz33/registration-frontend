@@ -13,6 +13,8 @@ import { EmployeeDeleteComponent } from './employee-delete/employee-delete.compo
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { EmployeeReadComponent } from './employee-read/employee-read.component';
 import {MatTableModule} from "@angular/material/table";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {MatTableModule} from "@angular/material/table";
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [MatSnackBar],
   bootstrap: [AppComponent]

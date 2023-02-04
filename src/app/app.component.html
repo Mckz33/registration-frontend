@@ -1,20 +1,19 @@
-<div class="frist">
-  <section>
-    <div class="example-button-row">
-      <button mat-button routerLink="/create" color="primary">CREATE</button>
-    </div>
-  </section>
+<mat-toolbar>
+  <div class="frist">
 
-  <section>
-    <div class="example-button-row">
-      <button mat-button routerLink="/read" color="primary">READ</button>
-    </div>
-  </section>
+    <section>
+      <div class="example-button-row">
+        <button mat-button routerLink="/create" color="primary">NEW EMPLOYEE</button>
+      </div>
+    </section>
 
-  <section>
-    <div class="example-button-row">
-      <button mat-button routerLink="/delete" color="primary">DELETE</button>
-    </div>
-  </section>
-</div>
+    <section>
+      <div class="example-button-row">
+        <button mat-button routerLink="/read" color="primary">SHOW EMPLOYEE</button>
+      </div>
+    </section>
+
+  </div>
+</mat-toolbar>
+
 <router-outlet></router-outlet>

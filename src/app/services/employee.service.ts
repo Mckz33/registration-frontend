@@ -34,4 +34,14 @@ export class EmployeeService {
   read(): Observable<any>{
     return this.httpClient.get<EmployeeModel[]>(this.baseUrl)
   }
+
+  delete(id: number | undefined): Observable<EmployeeModel> {
+    const url = `${this.baseUrl}/${id}`
+    return this.httpClient.delete<EmployeeModel>(url)
+  }
+
+  readById(id: string | null): Observable<any>{
+    const url = `${this.baseUrl}/${id}`
+    return this.httpClient.get<EmployeeModel>(url)
+  }
 }

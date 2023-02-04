@@ -1,35 +1,37 @@
-<div class="form">
-  <div class="card">
-    <h1>Employee Registration</h1>
-  </div>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Employee Name</mat-label>
-      <input matInput [(ngModel)]="employee.employeeName" [ngModelOptions]="{standalone: true}" placeholder="Digite">
-      <mat-icon matSuffix></mat-icon>
-    </mat-form-field>
-  </p>
-
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Address</mat-label>
-      <input matInput [(ngModel)]="employee.address" [ngModelOptions]="{standalone: true}" placeholder="Digite">
-      <mat-icon matSuffix></mat-icon>
-    </mat-form-field>
-  </p>
-
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Mobile</mat-label>
-      <input matInput [(ngModel)]="employee.mobile" [ngModelOptions]="{standalone: true}" placeholder="Digite">
-      <mat-icon matSuffix></mat-icon>
-    </mat-form-field>
-  </p>
-
-  <section>
-    <div class="example-button-row">
-      <button mat-button (click)="createEmployee()" color="primary">SAVE EMPLOYEE</button>
+<mat-toolbar>
+  <div class="form">
+    <div class="card">
+      <h1>Employee Registration</h1>
     </div>
-  </section>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Employee Name</mat-label>
+        <input matInput [(ngModel)]="employee.employeeName" [ngModelOptions]="{standalone: true}" placeholder="Digite">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </p>
 
-</div>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput [(ngModel)]="employee.address" [ngModelOptions]="{standalone: true}" placeholder="Digite">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Mobile</mat-label>
+        <input matInput [(ngModel)]="employee.mobile" [ngModelOptions]="{standalone: true}" placeholder="Digite">
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </p>
+
+    <section>
+      <div class="example-button-row">
+        <button mat-button (click)="createEmployee()" color="primary">SAVE EMPLOYEE</button>
+      </div>
+    </section>
+
+  </div>
+</mat-toolbar>

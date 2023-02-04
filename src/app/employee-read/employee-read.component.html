@@ -25,23 +25,22 @@
       <td mat-cell *matCellDef="let row">{{row.mobile}}</td>
     </ng-container>
 
-    <!-- Action Column -->
-<!--    <ng-container matColumnDef="action">-->
-<!--      <th mat-header-cell *matHeaderCellDef>Ações</th>-->
-<!--      <td mat-cell *matCellDef="let row">-->
-<!--        <a routerLink="/products/update/{{row.id}}" class="edit">-->
-<!--          <i class="material-icons">-->
-<!--            edit-->
-<!--          </i>-->
-<!--        </a>-->
-<!--        <a routerLink="/products/delete/{{row.id}}" class="delete">-->
-<!--          <i class="material-icons delete">-->
-<!--            delete-->
-<!--          </i>-->
-<!--        </a>-->
-<!--      </td>-->
-<!--    </ng-container>-->
-
+     Action Column
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let row">
+        <a routerLink="/employee/edit{{row.id}}" class="edit">
+          <i class="material-icons">
+            edit
+          </i>
+        </a>
+        <a routerLink="/employee/delete/{{row.id}}" class="delete">
+          <i class="material-icons delete">
+            delete
+          </i>
+        </a>
+      </td>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
